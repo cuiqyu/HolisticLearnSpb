@@ -1,0 +1,8 @@
+# sping\u76F8\u5173\u914D\u7F6E
+spring:
+  mvc:
+    servlet:
+      path: /limpid
+
+
+

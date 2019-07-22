@@ -1,0 +1,6 @@
+# 测试JavaBean映射属性值
+limpid:
+  blog:
+    name: cuiqyu
+    tile: springboot study
+    desc: ${limpid.blog.name} ${limpid.blog.tile}
