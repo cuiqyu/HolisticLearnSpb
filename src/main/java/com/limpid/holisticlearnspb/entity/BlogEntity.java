@@ -1,5 +1,6 @@
 package com.limpid.holisticlearnspb.entity;
 
+import com.limpid.holisticlearnspb.config.CustomerPropertySourceFactory;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,7 +17,7 @@ import org.springframework.context.annotation.PropertySource;
 @AllArgsConstructor
 @NoArgsConstructor
 @ConfigurationProperties(prefix = "limpid.blog")
-@PropertySource("classpath:config/blog.yml")
+@PropertySource(value = {"classpath:config/blog.yml"}, factory = CustomerPropertySourceFactory.class)
 public class BlogEntity {
 
     private String name;

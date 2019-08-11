@@ -24,7 +24,7 @@ public class Application implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        eventPublish.publishEvent(new UserRegisterEvent("user_source", "2", "3"));
+//        eventPublish.publishEvent(new UserRegisterEvent("user_source", "2", "3"));
     }
 
 }
