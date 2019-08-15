@@ -11,6 +11,8 @@ import java.util.function.Function;
  */
 public class LimpidTest {
 
+    private static BiFunction<Function<String, String>, String, String> biFunction = (s1, s2) -> s1.apply(s2);
+
     public static void main(String[] args) {
         LimpidTest test = new LimpidTest();
         System.out.println(test.testEat1());
@@ -33,7 +35,6 @@ public class LimpidTest {
     private String testEat2() {
         AnimalService animalService = new AnimalServiceImpl();
         String limpid = "limpid";
-        BiFunction<Function<String, String>, String, String> biFunction = (s1, s2) -> s1.apply(s2);
         return biFunction.apply(userName -> animalService.eatting(userName), limpid);
     }
 
@@ -47,7 +48,6 @@ public class LimpidTest {
     private String testSpeak2() {
         AnimalService animalService = new AnimalServiceImpl();
         String limpid = "limpid";
-        BiFunction<Function<String, String>, String, String> biFunction = (s1, s2) -> s1.apply(s2);
         return biFunction.apply(userName -> animalService.speaking(userName), limpid);
     }
 
@@ -61,7 +61,6 @@ public class LimpidTest {
     private String testSleep2() {
         AnimalService animalService = new AnimalServiceImpl();
         String limpid = "limpid";
-        BiFunction<Function<String, String>, String, String> biFunction = (s1, s2) -> s1.apply(s2);
         return biFunction.apply(userName -> animalService.sleeping(userName), limpid);
     }
 
@@ -75,7 +74,6 @@ public class LimpidTest {
     private String testWork2() {
         AnimalService animalService = new AnimalServiceImpl();
         String limpid = "limpid";
-        BiFunction<Function<String, String>, String, String> biFunction = (s1, s2) -> s1.apply(s2);
         return biFunction.apply(userName -> animalService.working(userName), limpid);
     }
 
