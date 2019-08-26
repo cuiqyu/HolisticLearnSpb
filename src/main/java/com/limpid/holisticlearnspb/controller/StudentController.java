@@ -1,13 +1,13 @@
 package com.limpid.holisticlearnspb.controller;
 
+import com.limpid.holisticlearnspb.annotation.Log;
 import com.limpid.holisticlearnspb.entity.StudentEntity;
 import com.limpid.holisticlearnspb.service.StudentService;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -31,6 +31,7 @@ public class StudentController {
      * @Param [student]
      * @return int
      **/
+    @Log("添加学生信息")
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     @ResponseBody
     public int insertStudent(StudentEntity student) {
@@ -44,6 +45,7 @@ public class StudentController {
      * @Param []
      * @return java.util.List<com.limpid.holisticlearnspb.entity.StudentEntity>
      **/
+    @Log("查询学生信息列表")
     @RequestMapping(value = "/getAll", method = RequestMethod.GET)
     @ResponseBody
     public List<StudentEntity> findAll() {

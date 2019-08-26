@@ -16,4 +16,6 @@ public interface StudentService {
 
     List<StudentEntity> findAll();
 
+    void testRetry() throws Exception;
+
 }

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.limpid.holisticlearnspb.dao.SysLogMapper">
+    <resultMap id="BaseResultMap" type="com.limpid.holisticlearnspb.entity.SysLogEntity">
+        <result column="id" jdbcType="INTEGER" property="id"/>
+        <result column="user_name" jdbcType="VARCHAR" property="user_name"/>
+        <result column="operation" jdbcType="VARCHAR" property="operation"/>
+        <result column="timestamp" jdbcType="INTEGER" property="timestamp"/>
+        <result column="method" jdbcType="VARCHAR" property="method"/>
+        <result column="parms" jdbcType="VARCHAR" property="parms"/>
+        <result column="ip" jdbcType="VARCHAR" property="ip"/>
+        <result column="createTime" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="updateTime" jdbcType="TIMESTAMP" property="updateTime"/>
+    </resultMap>
+    <insert id="insert" parameterType="com.limpid.holisticlearnspb.entity.SysLogEntity">
+        insert into sys_log (user_name, `operation`,
+          `timestamp`, `method`, parms,
+          ip, createTime
+          )
+        values (#{user_name,jdbcType=VARCHAR}, #{operation,jdbcType=VARCHAR},
+          #{timestamp,jdbcType=INTEGER}, #{method,jdbcType=VARCHAR}, #{parms,jdbcType=VARCHAR},
+          #{ip,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}}
+          )
+    </insert>
+    <select id="selectAll" resultMap="BaseResultMap">
+        select id, user_name, `operation`, `timestamp`, `method`, parms, ip, createTime,
+        updateTime
+        from sys_log
+    </select>
+</mapper>

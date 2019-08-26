@@ -2,7 +2,6 @@ package com.limpid.holisticlearnspb.controller;
 
 import com.limpid.holisticlearnspb.entity.BlogEntity;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,7 +15,7 @@ public class HelloWorldController {
     @Autowired
     private BlogEntity blogEntity;
 
-    @GetMapping("/hello")
+    @RequestMapping(value = "/hello")
     public String hello() {
         return blogEntity.getName() + " " + blogEntity.getTile() + " " + blogEntity.getDesc();
     }
