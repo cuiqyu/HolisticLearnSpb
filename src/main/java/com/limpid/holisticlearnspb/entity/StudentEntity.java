@@ -1,10 +1,13 @@
 package com.limpid.holisticlearnspb.entity;
 
-import lombok.Data;
+import lombok.*;
 
 import java.io.Serializable;
 
-@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class StudentEntity implements Serializable {
 
     private static final long serialVersionUID = -5524994417674273337L;

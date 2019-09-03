@@ -20,7 +20,6 @@ import java.lang.reflect.Method;
  * @Date 2019-08-26 21:30
  */
 @Aspect
-@Component
 public class RetryAspect {
 
     private final static Logger logger = LoggerFactory.getLogger(RetryAspect.class);
